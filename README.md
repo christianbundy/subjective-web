@@ -5,7 +5,7 @@ This is a small experiment in creating resilient web links. Instead of linking t
 ## Links
 
 - [`jordancrane/blog`](./submodules/jordancrane/blog/index.html)
-- [`sircmpwn/drewdevault.com`](./submodules/drewdevault.com/index.html)
+- [`sircmpwn/drewdevault.com`](./submodules/sircmpwn/drewdevault.com/index.html)
 
 ## Adding links
 
