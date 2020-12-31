@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git worktree add build
+git worktree add -f build
 cd build || exit 1
 git reset --hard main
 git submodule update --init --recursive --depth=1
