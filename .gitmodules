@@ -5,3 +5,6 @@
 	path = submodules/jordancrane/blog
 	url = https://github.com/jordancrane/blog.git
 	branch = gh-pages
+[submodule "submodules/drewdevault.com"]
+	path = submodules/drewdevault.com
+	url = file://../drewdevault.com/public/

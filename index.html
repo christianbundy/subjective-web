@@ -1,110 +1,29 @@
-<html>
-  <head>
-    <style>
-      /* Override browser defaults to avoid magic styles. */
-      * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 1.5rem 0;
-        font-size: 1rem;
-      }
-
-      li {
-        margin-left: 1.5rem;
-      }
-
-      html {
-        /* Reasonable font family stack. */
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-          Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-
-        /* Reasonable line length and height. */
-        max-width: 42rem;
-        line-height: 1.5rem;
-
-        /* Automatically center `<body>`. */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        min-height: 100%;
-
-        /* Let the text breathe a bit. Necessary because we removed margin. */
-        padding: 1.5rem;
-
-        /* Use at least 14pt font size. This isn't supported by some browsers,
-         so we fall back to the default font size instead of changing it. */
-        font-size: max(1rem, 14pt);
-      }
-
-      /* Child elements should use the margin of the parent. */
-      body,
-      * > :first-child {
-        margin-top: 0;
-      }
-      * > :last-child {
-        margin-bottom: 0;
-      }
-
-      /* Opinion: #0000FF is a bad blue. */
-      a:link,
-      a:visited {
-        color: hsl(240, 83.3%, 50%);
-      }
-      a:hover,
-      a:focus {
-        color: hsl(240, 100%, 50%);
-        background: hsl(240, 83.3%, 95.8%);
-        outline: 0.125rem solid hsl(240, 83.3%, 95.8%);
-      }
-      a:active {
-        background: hsl(240, 100%, 91.6%);
-        outline: 0.125rem solid hsl(240, 100%, 91.6%);
-      }
-
-      /* Right-justified text is customary for signatures. */
-      p.signature {
-        text-align: right;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Ahoy world!</h1>
-    <p>
-      I'm experimenting with a new format where I'd like to try embedding Git
-      repositories from my friends as Git submodules.
-    </p>
-
-    <p>Two random notes:</p>
-    <ul>
-      <li>
-        Jordan's
-        <a
-          href="submodules/jordancrane/blog/microposts/2020/07/20/181020/index.html"
-          >first micropost</a
-        >
-        has me on the edge of my seat. I'm very much looking forward to
-        micropost number two.
-      </li>
-      <li>
-        I wanted to have a local archive of coolguy.website but GitHub Pages
-        keeps complaining about the Jekyll build failing, so I'm going to have
-        to try [temporarily] removing it from this repo. 🙁
-      </li>
-    </ul>
-
-    <p>
-      I'm kinda impressed at how Jordan does a subtree push so that I don't have
-      to run <code>hugo</code> locally. I've been thinking about whether I'd
-      like to publish source (probably Markdown) or not (probably HTML) to my
-      Git repo, and it seems like maybe <em>two</em> repos solves this problem
-      rather well.
-    </p>
-
-    <p>
-      In other news, I've recently become very appreciative that I never got
-      that silly <code>&lt;/head&gt;&lt;body&gt;</code> tattoos that were
-      popular a few years ago. I wonder how many people got them.
-    </p>
-  </body>
-</html>
+<h1 id="submodule-web-thing">submodule web thing</h1>
+<p>integrating sites can be either easy or painful</p>
+<ul class="incremental">
+<li>does it require a build?
+<ul class="incremental">
+<li>if so, make a <code>build</code> directory (or similar) with the necessary assets</li>
+<li>the parent commit should be the latest source commit</li>
+<li><code>rm -rf public; git add worktree public; hugo</code> or similar works great</li>
+</ul></li>
+<li>does it require an absolute path?
+<ul class="incremental">
+<li>some websites link to <code>/style.css</code> and such, so they need a subdomain</li>
+<li>e.g. deploy <code>submodules/foo</code> to <code>foo.example.com</code></li>
+</ul></li>
+<li>does it link to itself?
+<ul class="incremental">
+<li>if ‘foo’ has hard links to ‘foo.com’, replace them – there’s no benefit, it just makes it non-portable</li>
+<li>note: imagine javascript that checks if it’s <code>test.foo.com</code> or <code>foo.com</code> – maybe that code should be fixed to only check subdomain
+<ul class="incremental">
+<li>unclear what should happen if it checks for <code>testfoo.com</code> or <code>foo.com</code>, maybe it should check for testfoo and fall back to prod mode 🤷 I have not encountered this yet</li>
+</ul></li>
+</ul></li>
+<li>does it link to directories as files?
+<ul class="incremental">
+<li>either fix or serve behind application that can figure out index files</li>
+<li>I get that <code>example.com/</code> looks nicer than <code>example.com/index.html</code> but this is semi-obnoxious</li>
+<li>kinda wish that directories would redirect (unsure whether temporary or permanent) to <code>index.html</code> instead of serving pages at a directory URI</li>
+</ul></li>
+</ul>
