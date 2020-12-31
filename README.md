@@ -1,20 +1,25 @@
-# Submodule Web Thing
+# Subjective Web Directory
 
-This is a small experiment in creating resilient web links. Instead of linking to a remote HTTP resource, this project aims to add links to static websites as Git submodules. This has a variety of interesting features that are left as an exercise to the reader.
+This is a small experiment to steward a resilient of archive of **my perspective** of the web, explicitly embedding content in my site rather than giving you a URL and hoping it's still around (and the same) when you click it. I'm also hoping that it might change how linking feels, as I'm now **syndicating content** and actively providing a platform for folks I'm paying attention to.
+
+## Requirements
+
+- **Git** -- I'm using Git submodules, which depend on Git repositories.
+- **Static sites** -- The Git repository must have a branch with static HTML.
+
+## Nice to have
+
+- 🔧 **Already built** -- Static site exported in `build` branch (or similar).
+- 👪 **Relative paths** -- Link to `../foo.html`, not `/foo.html`.
+- 🌐 **Protocol-less paths** -- Link to `./foo.html`, not `https://example.com/xyz/foo.html`. 
+- 📇 **No implicit indexes** -- Link to `./foo/index.html`, not `./foo`.
 
 ## Links
 
-- [`jordancrane/blog`](./submodules/jordancrane/blog/index.html)
-  - **Build:** Required, done (by Jordan -- thanks dude).
-  - **Absolute paths:** Found, not fixed.
-  - **Domain links:** Found, not fixed.
+- [`jordancrane/blog`](./submodules/jordancrane/blog/index.html) 🔧
 - [`sircmpwn/drewdevault.com`](./submodules/sircmpwn/drewdevault.com/index.html)
-  - **Build:** Required, done.
-  - **Absolute paths:** Found, some fixed.
-    - TODO: `/main-<hash>.min.css`, `/avatar.png`.
-  - **Domain links:** Found, not fixed.
 
-## Adding links
+## Notes
 
 - Does it require a build?
   - If so, make a `build` directory (or similar) with the necessary assets.
