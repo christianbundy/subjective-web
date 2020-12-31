@@ -2,6 +2,11 @@
 
 This is a small experiment in creating resilient web links. Instead of linking to a remote HTTP resource, this project aims to add links to static websites as Git submodules. This has a variety of interesting features that are left as an exercise to the reader.
 
+## Links
+
+- [`jordancrane/blog`](./submodules/jordancrane/blog/index.html)
+- [`sircmpwn/drewdevault.com`](./submodules/drewdevault.com/index.html)
+
 ## Adding links
 
 - Does it require a build?
