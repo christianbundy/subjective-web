@@ -5,7 +5,14 @@ This is a small experiment in creating resilient web links. Instead of linking t
 ## Links
 
 - [`jordancrane/blog`](./submodules/jordancrane/blog/index.html)
+  - **Build:** Required, done (by Jordan -- thanks dude).
+  - **Absolute paths:** Found, not fixed.
+  - **Domain links:** Found, not fixed.
 - [`sircmpwn/drewdevault.com`](./submodules/sircmpwn/drewdevault.com/index.html)
+  - **Build:** Required, done.
+  - **Absolute paths:** Found, some fixed.
+    - TODO: `/main-<hash>.min.css`, `/avatar.png`.
+  - **Domain links:** Found, not fixed.
 
 ## Adding links
 
