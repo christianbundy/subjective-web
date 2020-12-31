@@ -7,4 +7,4 @@
 	branch = gh-pages
 [submodule "submodules/drewdevault.com"]
 	path = submodules/drewdevault.com
-	url = file://../drewdevault.com/public/
+	url = file:///home/christianbundy/src/drewdevault.com/public/
