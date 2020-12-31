@@ -5,9 +5,7 @@
 	path = submodules/jordancrane/blog
 	url = https://github.com/jordancrane/blog.git
 	branch = gh-pages
-[submodule "submodules/drewdevault.com"]
-	path = submodules/drewdevault.com
-	url = file:///home/christianbundy/src/drewdevault.com/public/
 [submodule "submodules/sircmpwn/drewdevault.com"]
 	path = submodules/sircmpwn/drewdevault.com
-	url = file:///home/christianbundy/src/drewdevault.com/public
+	url = https://github.com/christianbundy/drewdevault.com.git
+	branch = public
