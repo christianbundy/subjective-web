@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <style>
+      /* Override browser defaults to avoid magic styles. */
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 1.5rem 0;
+        font-size: 1rem;
+      }
+
+      li {
+        margin-left: 1.5rem;
+      }
+
+      html {
+        /* Reasonable font family stack. */
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+          Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+
+        /* Reasonable line length and height. */
+        max-width: 42rem;
+        line-height: 1.5rem;
+
+        /* Automatically center `<body>`. */
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        min-height: 100%;
+
+        /* Let the text breathe a bit. Necessary because we removed margin. */
+        padding: 1.5rem;
+
+        /* Use at least 14pt font size. This isn't supported by some browsers,
+         so we fall back to the default font size instead of changing it. */
+        font-size: max(1rem, 14pt);
+      }
+
+      /* Child elements should use the margin of the parent. */
+      body,
+      * > :first-child {
+        margin-top: 0;
+      }
+      * > :last-child {
+        margin-bottom: 0;
+      }
+
+      /* Opinion: #0000FF is a bad blue. */
+      a:link,
+      a:visited {
+        color: hsl(240, 83.3%, 50%);
+      }
+      a:hover,
+      a:focus {
+        color: hsl(240, 100%, 50%);
+        background: hsl(240, 83.3%, 95.8%);
+        outline: 0.125rem solid hsl(240, 83.3%, 95.8%);
+      }
+      a:active {
+        background: hsl(240, 100%, 91.6%);
+        outline: 0.125rem solid hsl(240, 100%, 91.6%);
+      }
+
+      /* Right-justified text is customary for signatures. */
+      p.signature {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ahoy world!</h1>
+    <p>
+      I'm experimenting with a new format where I'd like to try embedding Git
+      repositories from my friends as Git submodules.
+    </p>
+
+    <p>Two random notes:</p>
+    <ul>
+      <li>
+        Jordan's
+        <a
+          href="submodules/jordancrane/blog/microposts/2020/07/20/181020/index.html"
+          >first micropost</a
+        >
+        has me on the edge of my seat. I'm very much looking forward to
+        micropost number two.
+      </li>
+      <li>
+        I'm super excited to have a
+        <a href="submodules/coolguy/www/index.html"
+          >local archive of coolguy.website</a
+        >, and just hit up Zach to see if there's a repo for his latest version.
+      </li>
+    </ul>
+
+    <p>
+      I'm kinda impressed at how Jordan does a subtree push so that I don't have
+      to run <code>hugo</code> locally. I've been thinking about whether I'd
+      like to publish source (probably Markdown) or not (probably HTML) to my
+      Git repo, and it seems like maybe <em>two</em> repos solves this problem
+      rather well.
+    </p>
+
+    <p>
+      In other news, I've recently become very appreciative that I never got
+      that silly <code>&lt;/head&gt;&lt;body&gt;</code> tattoos that were
+      popular a few years ago. I wonder how many people got them.
+    </p>
+  </body>
+</html>

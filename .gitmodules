@@ -1,0 +1,7 @@
+[submodule "submodules/coolguy"]
+	path = submodules/coolguy
+	url = https://gitlab.com/zachmandeville/coolguy.git
+[submodule "submodules/jordancrane/blog"]
+	path = submodules/jordancrane/blog
+	url = https://github.com/jordancrane/blog.git
+	branch = gh-pages
