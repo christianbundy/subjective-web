@@ -9,3 +9,6 @@
 	path = submodules/sircmpwn/drewdevault.com
 	url = https://github.com/christianbundy/drewdevault.com.git
 	branch = public
+[submodule "submodules/zim/coolguy-www"]
+	path = submodules/zim/coolguy-www
+	url = https://git.sr.ht/~zim/coolguy-www
