@@ -7,6 +7,7 @@ This is a small experiment to steward a resilient of archive of **my perspective
 - [`jordancrane/blog`](./submodules/jordancrane/blog/index.html) 🔧
 - [`sircmpwn/drewdevault.com`](./submodules/sircmpwn/drewdevault.com/index.html)
 - [`zim/coolguy-www`](./submodules/zim/coolguy-www/index.html)
+  - [The Map is the Territory](https://christianbundy.github.io/subjective-web/submodules/zim/coolguy-www/map-is-the-territory/introduction.html)
 
 ## Requirements
 
