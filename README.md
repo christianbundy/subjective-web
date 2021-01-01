@@ -2,6 +2,11 @@
 
 This is a small experiment to steward a resilient of archive of **my perspective** of the web, explicitly embedding content in my site rather than giving you a URL and hoping it's still around (and the same) when you click it. I'm also hoping that it might change how linking feels, as I'm now **syndicating content** and actively providing a platform for folks I'm paying attention to.
 
+## Links
+
+- [`jordancrane/blog`](./submodules/jordancrane/blog/index.html) 🔧
+- [`sircmpwn/drewdevault.com`](./submodules/sircmpwn/drewdevault.com/index.html)
+
 ## Requirements
 
 - **Git** -- I'm using Git submodules, which depend on Git repositories.
@@ -14,10 +19,6 @@ This is a small experiment to steward a resilient of archive of **my perspective
 - 🌐 **Protocol-less paths** -- Link to `./foo.html`, not `https://example.com/xyz/foo.html`. 
 - 📇 **No implicit indexes** -- Link to `./foo/index.html`, not `./foo`.
 
-## Links
-
-- [`jordancrane/blog`](./submodules/jordancrane/blog/index.html) 🔧
-- [`sircmpwn/drewdevault.com`](./submodules/sircmpwn/drewdevault.com/index.html)
 
 ## Notes
 
